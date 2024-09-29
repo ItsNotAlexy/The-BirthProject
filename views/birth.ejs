@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birth Project | Get Started</title>
+    <link rel="stylesheet" href="/styles/birth.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+</head>
+<body data-theme="lofi">
+    <div class="hero bg-base-200 min-h-screen">
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">Enter Your Birth Date!</div>
+                    <form action="/birth" method="POST">
+                        <div class="form-control">
+                            <label for="day">Day</label>
+                            <input type="text" inputmode="numeric" name="day" id="day" placeholder="Format: 01" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="month">Month</label>
+                            <input type="text" inputmode="numeric" name="month" id="month" placeholder="Format: 09" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="year">Year</label>
+                            <input type="text" inputmode="numeric"  name="year" id="year" placeholder="Format: 2007" required>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+.zodiac-sign {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.countdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    padding: 1px;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem;
+}
+
+.card .card-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.5rem;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.card label {
+    text-align: center;
+}
+
+.card button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}

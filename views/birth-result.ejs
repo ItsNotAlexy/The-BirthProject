@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birth Project | Your Birth Information</title>
+    <link rel="stylesheet" href="/styles/birth.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body data-theme="lofi">
+    <div class="hero bg-base-200 min-h-screen">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="col-span-1 md:col-span-2 bg-base-100 rounded-lg p-6">
+                    <h1 class="text-3xl font-bold text-center mb-4">Your Birth Information</h1>
+                    <p class="text-lg text-center">Age: <strong><%= age %> years old</strong></p>
+                    <p class="text-lg text-center">Birthdate: <strong><%= birthDate %></strong></p>
+                </div>
+                <div class="bg-base-100 rounded-lg p-6 flex flex-col items-center">
+                    <h2 class="text-xl font-semibold mb-2 text-center">Zodiac Sign</h2>
+                    <div class="zodiac-sign text-center">
+                        <%= zodiacSignEmoji %>
+                    </div>
+                    <p class="text-center mt-2"><strong><%= zodiacSign %></strong></p>
+                </div>
+
+                <!-- Next Birthday Section -->
+                <div class="bg-base-100 rounded-lg p-6 flex flex-col items-center">
+                    <h2 class="text-xl font-semibold mb-2 text-center">Next Birthday</h2>
+                    <p class="text-center"><span id="countdown" class="countdown"></span></p>
+                    <p class="text-center">Your next birthday is on <strong><%= nextBirthday.toDateString() %></strong></p>
+                    <p class="text-center">(in <strong><%= eta %> days</strong>)</p>
+                </div>
+
+                <!-- Zodiac Personality Section -->
+                <div class="bg-base-100 rounded-lg p-6 flex flex-col items-center">
+                    <h2 class="text-xl font-semibold mb-2 text-center">Zodiac Personality</h2>
+                    <p class="text-center"><%= zodiacPersonality %></p>
+                </div>
+
+                <!-- Horoscope Section -->
+                <div class="bg-base-100 rounded-lg p-6 flex flex-col items-center">
+                    <h2 class="text-xl font-semibold mb-2 text-center">Your Zodiac Predictions</h2>
+                    <p class="text-center"><%= horoscope %></p>
+                </div>
+            </div>
+
+            <!-- Back button -->
+            <div class="flex justify-center mt-8">
+                <a href="/birth" class="btn btn-primary">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/birth-countdown.js"></script>
+    <script>
+        const nextBirthday = new Date("<%= nextBirthday.toISOString() %>");
+        updateCountdown(nextBirthday);
+    </script>
+</body>
+</html>
