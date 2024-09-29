@@ -5,6 +5,12 @@ A side-project created for viewing information based on your birth date.
 This project is mostly a side-project to develop my skills and knowledge of ExpressJS aswell as some other frameworks.<br>
 The program is simple but I believe it is quite valuable for project based learning and a great addition to my CV.
 
+# Features ✨
+- Mobile Responsive 📱
+- Highly Customizeable 🔧
+- Modern Design 💡
+- Simple and Unique 💖
+
 # Technology 💻
 - ExpressJS
 - RapidAPI
